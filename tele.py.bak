@@ -193,7 +193,7 @@ async def ownerpowers(e):
 
 @client.on(events.NewMessage)
 async def my_e_handler(e):
-	if '.xen ping' == e.raw_text:
+	if '.matrix ping' == e.raw_text:
 		start=round(time.time() * 1000)
 		pongmsg=await e.reply('Pong!')
 		end=round(time.time() * 1000)
