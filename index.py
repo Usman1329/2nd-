@@ -41,7 +41,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest, ExportInviteRequ
 # Welcome to blank X's userbot file.
 # Don't try to find for any personal information.
 # Below, you'll see the api_id and api_hash. You will need to fill them in
-# Almost all commands have /xen, you can find /xen and replace with whatever you like.
+# Almost all commands have /matrix, you can find /Usman and replace with whatever you like.
 
 # Get your own at https://my.telegram.org
 api_id = 192405
@@ -320,7 +320,7 @@ async def ownerpowers(e):
 
 @client.on(events.NewMessage)
 async def my_e_handler(e):
-	if '.xen ping' == e.raw_text:
+	if '.matrix ping' == e.raw_text:
 		start=round(time.time() * 1000)
 		pongmsg=await e.reply('Pong!')
 		end=round(time.time() * 1000)
@@ -364,12 +364,12 @@ async def mention_afk(event):
     if event.message.mentioned:
         if ISAFK:
             if event.chat_id not in USERS:
-                  await event.reply("Sorry! Xen is currently away from keyboard")
+                  await event.reply("Sorry! Master Usman is currently away from keyboard")
                   USERS.update({event.chat_id:1})
                   COUNT_MSG=COUNT_MSG+1
             elif event.chat_id in USERS:
                  if USERS[event.chat_id] % 5 == 0:
-                      await event.reply("Sorry! But Xen is still not here. Try to ping him later. I am sorry😖")
+                      await event.reply("Sorry! But Master Usman is still not here. Try to ping him later. I am sorry😖")
                       USERS[event.chat_id]=USERS[event.chat_id]+1
                       COUNT_MSG=COUNT_MSG+1
                  else:
